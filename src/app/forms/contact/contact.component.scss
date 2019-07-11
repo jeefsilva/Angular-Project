@@ -1,0 +1,154 @@
+.form {
+  background-image: url('/assets/building-bg.svg');
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: 90%;
+  height: 1090px;
+  --mdc-layout-grid-margin-phone: 0 !important;
+}
+
+.data-label {
+  width: 320px !important;
+}
+
+.logo {
+  width: 200px;
+  padding: 44px 0;
+}
+
+.logo-flex {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.title-logo {
+  font-family: "Open Sans", sans-serif;
+  font-size: 34px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: -0.5px;
+  color: rgba(0, 0, 0, 0.6);
+  padding-left: 48px;
+}
+
+.card {
+  width: 100%;
+  height: auto;
+}
+
+.title-field {
+  background-color: #3c97d2;
+  padding: 16px;
+}
+
+.title {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: 0.3px;
+  color: #ffffff;
+}
+
+.field {
+  padding: 16px;
+}
+
+.text-field {
+  width: 100%;
+  margin: 0 0 8px 0 !important;
+}
+
+.text-area {
+  //margin-top: 80px;
+  resize: none;
+}
+
+.error-span {
+  color: #b00020;
+  font-family: "Roboto", sans-serif;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-size: 1rem;
+  line-height: 1.75rem;
+  font-weight: 400;
+  letter-spacing: 0.009375em;
+  width: 100%;
+  position: relative;
+  top: 13px;
+  left: 25px;
+}
+
+.button {
+  margin-top: 24px;
+  width: 96px;
+  background: #3c97d2;
+  color: white;
+  line-height: 1.14;
+  border-radius: 3px;
+}
+
+@media (max-width: 840px) {
+  .no-tablet {
+    display: none;
+  }
+}
+
+@media (min-width: 840px) {
+  .data-label {
+    margin-left: 80px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo {
+    width: 300px;
+    padding: 22px 0;
+  }
+
+  .form {
+    background-color: #F7F7F7;
+    height: 1400px;
+  }
+
+  .logo-flex {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    margin-bottom: 0;
+  }
+
+  .data-label {
+    margin-bottom: 40px;
+    padding: 24px;
+    background-color: white;
+    width: fit-content !important;
+  }
+
+  .title-logo {
+    display: none;
+  }
+}
+
+@import "../../../../node_modules/@angular-mdc/theme/material";
+
+.demo-textarea:not(.mdc-text-field--invalid) {
+  $idle-border: rgba(black, .25);
+  $focused-border: #3c97d2;
+
+  @include mdc-text-field-ink-color(black);
+  @include mdc-text-field-textarea-stroke-color($idle-border);
+
+  &.mdc-text-field--focused {
+    @include mdc-text-field-textarea-stroke-color($focused-border);
+  }
+}

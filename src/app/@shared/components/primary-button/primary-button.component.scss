@@ -1,0 +1,36 @@
+@import "~@angular-mdc/theme/material-components-web/layout-grid/mdc-layout-grid";
+
+button {
+  height: 46px;
+}
+
+.evaluation-button {
+  margin: 44px 24px 44px 0;
+  width: 300px;
+  background: #3c97d2;
+  color: white;
+  line-height: 1.14;
+  border-radius: 3px;
+
+  @media (max-width: 480px) {
+    margin: 0;
+    width: 300px;
+  }
+  @media (max-width: 755px) {
+    margin: 44px 0 0 0;
+  }
+
+  img {
+    width: 30px;
+    padding-right: 20px;
+  }
+}
+
+span {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  display: inline-block;
+  align-items: center;
+  letter-spacing: 0;
+}

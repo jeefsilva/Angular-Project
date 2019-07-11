@@ -1,0 +1,23 @@
+@import "~@angular-mdc/theme/material-components-web/layout-grid/mdc-layout-grid";
+
+.clients {
+  margin-top: 136px;
+
+  @media (min-width: 1440px) {
+    --mdc-layout-grid-margin-desktop: 0 10% !important;
+  }
+}
+
+.clients-list {
+  padding-top: 74px;
+  padding-bottom: 74px;
+  background-color: #F7F7F7;
+}
+
+.card {
+  padding-top: 16px;
+
+  @extend .mdc-layout-grid__cell--span-4-desktop,
+  .mdc-layout-grid__cell--span-4-tablet,
+  .mdc-layout-grid__cell--span-4-phone;
+}

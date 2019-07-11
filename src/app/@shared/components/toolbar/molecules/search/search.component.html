@@ -1,0 +1,17 @@
+<div class="search">
+  <img src="/assets/search-icon.svg">
+  <input #input type="search" placeholder="Pesquisa" (keyup)="onChange()"
+         (focus)="focused = true" (blur)="onBlur()">
+  <mdc-icon *ngIf="clearIcon && text" class="clear" (click)="clear()" title="limpar">clear</mdc-icon>
+</div>
+<mdc-card *ngIf="text && results && focused" class="results mdc-elevation--z8" mdcTypography>
+  <span class="no-results" *ngIf="results && !results.length">Nenhum resultado</span>
+  <mdc-list *ngIf="results?.length">
+    <mdc-list-item *ngFor="let result of results" class="item"
+                   [routerLink]="result.target"
+                   (click)="onClickResult(result)">
+      <span>{{result.title}}</span>
+    </mdc-list-item>
+  </mdc-list>
+</mdc-card>
+

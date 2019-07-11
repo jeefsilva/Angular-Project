@@ -1,0 +1,9 @@
+.page {
+  margin-top: 136px;
+}
+
+@media (min-width: 1440px) {
+  .page {
+  --mdc-layout-grid-margin-desktop: 0 10% !important;
+  }
+}

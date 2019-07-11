@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+  xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+
+  <url>
+    <loc>https://sobtic.com.br/</loc>
+    <lastmod>2018-12-20T00:00:00+00:00</lastmod>
+    <priority>1</priority>
+  </url>
+
+  <url>
+    <loc>https://sobtic.com.br/processo</loc>
+    <lastmod>2018-12-20T00:00:00+00:00</lastmod>
+  </url>
+  <url>
+    <loc>https://sobtic.com.br/parceiros</loc>
+    <lastmod>2018-12-20T00:00:00+00:00</lastmod>
+  </url>
+  <url>
+    <loc>https://sobtic.com.br/solucoes</loc>
+    <lastmod>2018-12-20T00:00:00+00:00</lastmod>
+  </url>
+  <url>
+    <loc>https://sobtic.com.br/solucoes/gestao-de-marketing-com-mailchimp</loc>
+    <lastmod>2018-12-20T00:00:00+00:00</lastmod>
+  </url>
+  <url>
+    <loc>https://sobtic.com.br/solucoes/gestao-de-vendas-com-pipedrive</loc>
+    <lastmod>2018-12-20T00:00:00+00:00</lastmod>
+  </url>
+  <url>
+    <loc>https://sobtic.com.br/solucoes/gestao-financeira-com-contaazul</loc>
+    <lastmod>2018-12-20T00:00:00+00:00</lastmod>
+  </url>
+  <url>
+    <loc>https://sobtic.com.br/solucoes/gestao-operacional-com-pipefy</loc>
+    <lastmod>2018-12-20T00:00:00+00:00</lastmod>
+  </url>
+  <url>
+    <loc>https://sobtic.com.br/clientes</loc>
+    <lastmod>2018-12-20T00:00:00+00:00</lastmod>
+  </url>
+  <url>
+    <loc>https://sobtic.com.br/contato</loc>
+    <lastmod>2018-12-20T00:00:00+00:00</lastmod>
+  </url>
+
+</urlset>

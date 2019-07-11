@@ -1,0 +1,20 @@
+<div class="clients">
+  <app-head-shared title="casos de sucesso" text="Acreditamos no potencial da Gestão Empresarial 360º focada no
+      relacionamento contínuo, entendendo que valor é resultado de uma boa entrega." [button]="true"></app-head-shared>
+
+  <div class="mdc-layout-grid clients-list">
+    <div class="mdc-layout-grid__inner">
+      <div class="card" *ngFor="let testimony of testimonies">
+        <app-testimony [title]="testimony.company.name" [companyLogo]="testimony.company.logoSrc">
+          <p text *ngFor="let content of testimony.content">
+            {{content}}
+          </p>
+          <app-client [name]="testimony.client.name" [title]="testimony.client.title"
+                      [photo]="testimony.client.photoSrc"></app-client>
+        </app-testimony>
+      </div>
+    </div>
+  </div>
+</div>
+
+<app-footer></app-footer>

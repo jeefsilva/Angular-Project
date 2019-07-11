@@ -1,0 +1,60 @@
+<mdc-app-bar [fixed]="true" class="desktop-nav">
+  <div class="nav-logo">
+    <div class="logo">
+      <app-logo></app-logo>
+    </div>
+    <app-search #desktopSearch [data]="searchData" (resultClick)="onSearchResultClicked($event)"
+                [style.width]="desktopSearch?.focused ? '360px' : '260px'"></app-search>
+  </div>
+
+  <div class="menu">
+    <mdc-tab-bar #tabBar (selectedTabChange)="onTabChanged($event)">
+      <mdc-tab disableRipple="true" *ngFor="let tab of tabs" [routerLink]="tab.route">
+        {{tab.label}}
+      </mdc-tab>
+    </mdc-tab-bar>
+
+    <div class="buttons">
+      <button mdc-button [dense]="true" [unelevated]="true" color="primary" routerLink="/contato">entre em contato</button>
+    </div>
+  </div>
+</mdc-app-bar>
+
+<mdc-app-bar [fixed]="true" class="mobile-nav">
+  <mdc-drawer #temporary drawer='temporary'>
+    <mdc-drawer-content>
+      <div class="logo">
+        <app-logo></app-logo>
+      </div>
+      <hr class="mdc-list-divider">
+      <mdc-list-group>
+        <mdc-list>
+          <mdc-list-item *ngFor="let tab of tabs" [routerLink]="tab.route">
+            {{tab.label}}
+          </mdc-list-item>
+        </mdc-list>
+      </mdc-list-group>
+    </mdc-drawer-content>
+  </mdc-drawer>
+  <div class="nav-logo">
+    <div class="logo" *ngIf="!searchOpen">
+      <mdc-icon class="icon" mdc-toolbar-menu-icon (click)="temporary.open()">menu</mdc-icon>
+      <app-logo></app-logo>
+    </div>
+    <div class="search-icon" *ngIf="!searchOpen">
+      <mdc-icon (click)="openSearch()">search</mdc-icon>
+    </div>
+
+    <app-search #mobileSearch *ngIf="searchOpen" [data]="searchData"
+                (resultClick)="onSearchResultClicked($event)"></app-search>
+
+    <mdc-icon *ngIf="searchOpen" class="search-icon" (click)="closeSearch()">cancel</mdc-icon>
+  </div>
+
+  <div class="menu">
+    <div class="buttons">
+      <button mdc-button [dense]="true" [unelevated]="true" color="primary" routerLink="/contato">entre em contato</button>
+    </div>
+  </div>
+</mdc-app-bar>
+

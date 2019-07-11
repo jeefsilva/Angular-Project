@@ -1,0 +1,46 @@
+@import "../../../../../../node_modules/@angular-mdc/theme/material-components-web/layout-grid/mdc-layout-grid";
+
+.process-card {
+  height: 380px;
+
+}
+
+.process-card-title {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.process-card-icon{
+  font-size: 80px;
+  color: rgba(0, 0, 0, 0.54);
+  padding: 0 4%;
+  color: #3c97d2;
+}
+
+.title {
+  width: 168px;
+  height: 24px;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: 0.3px;
+  color: rgba(0, 0, 0, 0.87);
+}
+
+.process-card-text {
+
+  padding: 22px 20px 0 20px;
+  height: 84px;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.75;
+  letter-spacing: 0.5px;
+  color: rgba(0, 0, 0, 0.6);
+}

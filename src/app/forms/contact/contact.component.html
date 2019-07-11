@@ -1,0 +1,44 @@
+<div class="mdc-layout-grid form">
+  <div class="mdc-layout-grid__inner">
+    <div class="mdc-layout-grid__cell--span-1-desktop no-tablet"></div>
+    <div class="mdc-layout-grid__cell--span-11-desktop mdc-layout-grid__cell--span-8-tablet mdc-layout-grid__cell--span-4-phone logo-flex">
+      <img class="logo" src="assets/logo.svg">
+    </div>
+    <div class="mdc-layout-grid__cell--span-1-desktop no-tablet"></div>
+    <div class="mdc-layout-grid__cell--span-6-desktop mdc-layout-grid__cell--span-5-tablet mdc-layout-grid__cell--span-4-phone">
+      <mdc-card class="card">
+        <form [formGroup]="contactForm" (submit)="saveForm()">
+          <div class="title-field">
+            <h6 class="title">Contato com a equipe de vendas</h6>
+          </div>
+          <div class="field">
+            <mdc-text-field class="text-field" formControlName="name" name="name" [(ngModel)]="contact.name" #outlined [outline]="true" label="Nome" [required]="true"></mdc-text-field>
+            <mdc-text-field class="text-field" formControlName="surname" name="surname" [(ngModel)]="contact.surname" #outlined [outline]="true" label="Sobrenome" [required]="true"></mdc-text-field>
+            <mdc-text-field class="text-field" formControlName="email" name="email" [(ngModel)]="contact.email" pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" type="email" email #outlined [outline]="true" label="E-mail" [required]="true"></mdc-text-field>
+            <mdc-text-field class="text-field" #confirmEmailInput formControlName="confirmEmail" name="confirmEmail" pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" type="email" email [(ngModel)]="confirmEmail" #outlined [outline]="true" label="Confirmar e-mail" [required]="true"></mdc-text-field>
+            <mdc-text-field class="text-field" formControlName="phone" name="phone" [(ngModel)]="contact.phone" #outlined [outline]="true" label="Telefone" [required]="true"></mdc-text-field>
+            <mdc-text-field class="text-field" formControlName="company" name="company" [(ngModel)]="contact.company" #outlined [outline]="true" label="Empresa" [required]="true"></mdc-text-field>
+            <mdc-text-field class="text-field" formControlName="section" name="section" [(ngModel)]="contact.section" #outlined [outline]="true" label="Segmento" [required]="true"></mdc-text-field>
+            <mdc-text-field class="text-field" formControlName="role" name="role" [(ngModel)]="contact.role" #outlined [outline]="true" label="Cargo" [required]="true"></mdc-text-field>
+            <mdc-textarea class="text-area demo-textarea" formControlName="message" name="message" [(ngModel)]="contact.message" label="Mensagem" [fullwidth]="true" [required]="true"></mdc-textarea>
+            <button mdc-button class="button" [raised]="true" [disabled]="contactForm.invalid">Enviar</button>
+            <span class="error-span" *ngIf="customValidators.hasInequivalenceError(contactForm, confirmEmailInput, 'confirmEmail')
+                || !customValidators.isValidEmail(contactForm, confirmEmailInput, 'confirmEmail')">E-mail inválido</span>
+          </div>
+        </form>
+      </mdc-card>
+    </div>
+    <div class="mdc-layout-grid__cell--span-5-desktop mdc-layout-grid__cell--span-3-tablet mdc-layout-grid__cell--span-4-phone data-label">
+      <app-form-text title="E-mail" icon="email">
+        <span text>comercial@sobtic.com.br</span>
+      </app-form-text>
+      <app-form-text title="Telefone" icon="call">
+        <span text>+55 (11) 2186-0390</span>
+      </app-form-text>
+      <app-form-text title="Endereço" icon="room">
+        <span text>Avenida Paulista, 854 - Andar 10, Bela Vista, São Paulo - SP </span>
+        <span text>01310-100</span>
+      </app-form-text>
+    </div>
+  </div>
+</div>

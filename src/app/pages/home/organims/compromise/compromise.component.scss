@@ -1,0 +1,27 @@
+@import "~@angular-mdc/theme/material-components-web/layout-grid/mdc-layout-grid";
+
+.compromise {
+  background-color: #F7F7F7;
+  background-size: cover;
+  height: 100%;
+  padding-top: 44px;
+  padding-bottom: 220px;
+
+  @media (max-width: 480px) {
+    padding-bottom: 44px;
+  }
+}
+
+h2 {
+  width: 287px;
+  font-family: "Open Sans", sans-serif;
+  font-size: 30px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: -0.3px;
+  color: rgba(0, 0, 0, 0.6);
+  margin: 0;
+  padding-bottom: 32px;
+}

@@ -1,0 +1,21 @@
+.products-img {
+  width: 100%;
+}
+
+.img-flex {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@media (max-width: 840px) {
+  .products-img {
+    width: 60%;
+  }
+}
+
+@media (max-width: 480px) {
+  .products-img {
+    width: 80%;
+  }
+}

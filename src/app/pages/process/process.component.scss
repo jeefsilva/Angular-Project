@@ -1,0 +1,32 @@
+@import "../../../../node_modules/@angular-mdc/theme/material-components-web/layout-grid/mdc-layout-grid";
+
+.process {
+  margin-top: 136px;
+}
+
+.process-card {
+  background-color: #F7F7F7;
+}
+
+.process-card-margin {
+  padding-top: 75px;
+  padding-bottom: 75px;
+}
+
+.white-bg {
+  height: 175px;
+  background-color: #F7F7F7;
+}
+
+@media (max-width: 480px) {
+  .white-bg {
+    display: none;
+  }
+}
+
+@media (min-width: 1440px) {
+  .process {
+    --mdc-layout-grid-margin-desktop: 0 10% !important;
+  }
+}
+

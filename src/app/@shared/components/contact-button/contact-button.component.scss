@@ -1,0 +1,33 @@
+@import "~@angular-mdc/theme/material-components-web/layout-grid/mdc-layout-grid";
+button {
+  height: 46px;
+}
+
+.contact-button {
+  margin: 44px 0 44px 0;
+  width: 400px;
+  background-color: white;
+  color: #3c97d2;
+  line-height: 1.14;
+  border-radius: 3px;
+  border-color: rgba(0, 0, 0, 0.12);
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  display: inline-block;
+  align-items: center;
+  letter-spacing: 0;
+}
+
+@media (max-width: 480px) {
+  .contact-button {
+    margin: 0;
+    width: 300px;
+  }
+}
+
+@media (max-width: 755px) {
+  .contact-button {
+    margin: 14px 0 0 0;
+  }
+}

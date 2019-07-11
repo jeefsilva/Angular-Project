@@ -1,0 +1,13 @@
+:host {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+img {
+  width: 60px;
+  height: 60px;
+  background-color: grey;
+  margin-right: 12px;
+  border-radius: 100%;
+}

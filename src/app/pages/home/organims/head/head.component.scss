@@ -1,0 +1,60 @@
+@import "~@angular-mdc/theme/material-components-web/layout-grid/mdc-layout-grid";
+
+.head {
+  margin-top: 136px;
+  background: url('/assets/gray-halflogo.svg') no-repeat right bottom;
+}
+
+h1 {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  margin: 0;
+}
+
+h5 {
+  font-family: "Roboto", sans-serif;
+}
+
+p {
+  font-family: "Open Sans", sans-serif;
+  margin: 0;
+}
+
+.title {
+  margin-top: 44px  ;
+  color: rgba(0, 0, 0, 0.6);
+  font-size: 34px;
+}
+
+.subtitle {
+  font-size: 34px;
+  color: #3c97d2;
+}
+
+.body {
+  width: 100%;
+  color: rgba(0, 0, 0, 0.6);
+  font-size: 16px;
+  margin-bottom: 16px;
+
+  a {
+    text-transform: uppercase;
+    color: #3c97d2;
+    text-decoration: none;
+  }
+}
+
+.buttons {
+  display: flex;
+  flex-direction: row;
+}
+
+.gray-logo {
+  padding-top: 101px;
+}
+
+@media (max-width: 480px) {
+  .no-mobile {
+    display: none;
+  }
+}

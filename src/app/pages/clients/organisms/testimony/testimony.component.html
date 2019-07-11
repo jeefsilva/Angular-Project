@@ -1,0 +1,11 @@
+<mdc-card class="card">
+  <div class="card-head">
+    <img class="logo" [src]="companyLogo">
+    <h3 class="title">{{title}}</h3>
+    <ng-content slot="text"></ng-content>
+  </div>
+
+  <div class="client-box">
+    <ng-content select="app-client"></ng-content>
+  </div>
+</mdc-card>

@@ -1,0 +1,39 @@
+.form-text {
+  display: flex;
+  flex-direction: row;
+  padding-top: 16px;
+}
+
+.icon {
+  font-size: 44px;
+  color: black;
+  padding-right: 20px;
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+}
+
+.title {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  font-size: 24px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: rgba(0, 0, 0, 0.87);
+}
+
+::ng-deep [text] {
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.75;
+  letter-spacing: 0.5px;
+  color: rgba(0, 0, 0, 0.6);
+}

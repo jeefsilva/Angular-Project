@@ -1,0 +1,9 @@
+name: site-sobtic-front
+path: ../dist
+buildpack: staticfile_buildpack
+
+memory: 32M
+instances: 2
+routes:
+- route: 'sobtic-site-prod.cfapps.io'
+- route: 'sobtic.com.br'

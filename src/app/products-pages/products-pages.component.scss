@@ -1,0 +1,9 @@
+.products-pages {
+  margin-top: 120px;
+}
+
+@media (min-width: 1440px) {
+  .products-pages {
+    --mdc-layout-grid-margin-desktop: 0 10% !important;
+  }
+}

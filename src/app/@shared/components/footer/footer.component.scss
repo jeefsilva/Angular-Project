@@ -1,0 +1,127 @@
+@import "~@angular-mdc/theme/material-components-web/layout-grid/mdc-layout-grid";
+
+.column {
+  @extend
+    .mdc-layout-grid__cell--span-2-desktop,
+    .mdc-layout-grid__cell--span-4-tablet,
+    .mdc-layout-grid__cell--span-4-phone;
+
+  padding-left: 50px;
+}
+
+.background {
+  background-color: #313c42;
+  --mdc-layout-grid-margin-desktop: 0 !important;
+  --mdc-layout-grid-margin-tablet: 0 !important;
+  --mdc-layout-grid-margin-phone: 0 !important;
+
+  @media (max-width: 480px) {
+    padding-top: 24px;
+  }
+}
+
+.border {
+  border-top: 1px solid #465a63;
+  height: 56px;
+  background-color: #465a63;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.title {
+  margin: 32px 0 0 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: 0.3px;
+  color: #ffffff;
+}
+
+.footer a {
+  margin-top: 16px;
+  width: fit-content;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  text-decoration: none;
+  line-height: 1.75;
+  letter-spacing: 0.5px;
+  color: rgba(255, 255, 255, 0.6);
+
+  &[href]:hover {
+    color: #fff;
+  }
+}
+
+.copyright {
+  font-family: "Open Sans", sans-serif;
+  font-size: 12px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: -0.1px;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.87);
+  padding-left: 56px;
+}
+
+.profile {
+  background-color: #38424a;
+  padding: 0 20% 5% 5%;
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding-bottom: 150px;
+}
+
+
+@media (max-width: 480px) {
+  .title {
+    margin-top: 0;
+  }
+
+  .column {
+    padding-left: 30px;
+  }
+
+  .profile {
+    padding-top: 24px;
+    padding-left: 29px !important;
+  }
+
+  .copyright {
+    padding-left: 29px;
+  }
+
+  .profile-link {
+    padding-bottom: 32px;
+  }
+}
+
+@media (min-width: 840px) {
+  .profile {
+    margin-left: 50px;
+  }
+}
+
+@media (max-width: 840px) {
+  .profile {
+    padding-left: 50px;
+  }
+
+  .footer {
+    padding-bottom: 20px;
+  }
+}
+
+

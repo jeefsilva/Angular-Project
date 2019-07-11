@@ -1,0 +1,187 @@
+@import "~@angular-mdc/theme/material-components-web/layout-grid/mdc-layout-grid";
+@import "~@angular-mdc/theme/material-components-web/textfield/mdc-text-field";
+@import "~@angular-mdc/theme/material-components-web/button/mixins";
+@import "~@angular-mdc/theme/material-components-web/tabs/tab-bar/mdc-tab-bar";
+@import "~@angular-mdc/theme/material-components-web/list/mdc-list";
+
+@include mdc-tab-bar-indicator-ink-color($mdc-theme-primary);
+
+.menu {
+  background: #F7F7F7;
+  display: flex;
+  flex-direction: row;
+  box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.21), 0 2px 1px -1px rgba(0, 0, 0, 0.12), 0 1px 1px 0 rgba(0, 0, 0, 0.14);
+
+  mdc-tab-bar {
+    height: 56px;
+    margin-left: 0;
+  }
+
+  mdc-tab {
+    color: rgba(0, 0, 0, 0.6);
+    font-size: 14px;
+    font-weight: 400;
+    text-transform: none;
+    padding: 0 16px;
+    min-width: fit-content;
+    transition: color 0.3s;
+
+    &:hover, &.mdc-tab--active {
+      color: rgba(0, 0, 0, 0.9)
+    }
+  }
+
+  a {
+    font-size: 20px;
+    height: 56px;
+  }
+}
+
+.desktop-nav app-search {
+  width: 182px;
+  transition: all .2s;
+}
+
+.mobile-nav {
+  @media (min-width: 860px) {
+    display: none;
+  }
+
+  .menu button {
+    padding: 0 16px;
+    letter-spacing: 0.01em;
+
+    @media (max-width: 380px) {
+      padding: 0 8px;
+    }
+  }
+
+  app-search {
+    width: 100%;
+    margin-right: 16px;
+  }
+
+  mdc-drawer-content .logo {
+    margin: 12px;
+  }
+}
+
+.buttons {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 4px 0;
+  padding: 0 12px;
+
+  @media (max-width: 350px) {
+    padding: 0 4px;
+  }
+
+  button {
+    margin-left: 16px;
+
+    @media (max-width: 320px) {
+      margin-left: 4px;
+    }
+  }
+}
+
+.spacer {
+  flex: 1 1 auto;
+}
+
+.rating-button {
+  background: #3c97d2;
+  color: white;
+  width: 203px;
+  border-radius: 3px;
+  letter-spacing: 0;
+}
+
+.contact-button {
+  border: 1px solid #dfdfdf;
+  @include mdc-button-outline-color(rgba(0, 0, 0, 0.12));
+  @include mdc-button-container-fill-color(white)
+}
+
+.nav-logo {
+  height: 56px;
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 4px 24px 4px 24px;
+}
+
+.gestao {
+  color: rgba(0, 0, 0, 0.6);
+  height: 46px;
+  font-family: "Open Sans", sans-serif;
+  font-size: 28px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: -0.5px;
+  text-transform: uppercase;
+  padding-top: 10px;
+  padding-left: 20px;
+}
+
+.logo {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.icon {
+  padding-right: 20px;
+  color: black;
+}
+
+.search-icon {
+  color: #3E3E3E !important;
+}
+
+.drawer-header {
+  background-color: #F7F7F7 !important;
+}
+
+.logo-head-sidenav {
+  width: 80px;
+}
+
+.mdc-ripple-upgraded--background-focused::before{
+  opacity: 0;
+}
+
+.mdc-tab::before {
+  background: none;
+}
+
+.mdc-tab::after {
+  background: none;
+}
+
+@media (max-width: 860px) {
+  .desktop-nav {
+    display: none;
+  }
+
+  .nav-logo {
+    padding: 4px 22px;
+  }
+
+  .menu {
+    justify-content: flex-end;
+  }
+
+  .contact-button {
+    margin-right: 0;
+  }
+}
+
+
+
+
